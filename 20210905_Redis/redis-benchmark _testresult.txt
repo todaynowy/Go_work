@@ -1,0 +1,343 @@
+
+gec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 10 -t get
+====== GET ======
+  100000 requests completed in 2.21 seconds
+  50 parallel clients
+  10 bytes payload
+  keep alive: 1
+
+89.15% <= 1 milliseconds
+92.78% <= 2 milliseconds
+95.80% <= 3 milliseconds
+98.35% <= 4 milliseconds
+99.50% <= 5 milliseconds
+99.74% <= 6 milliseconds
+99.86% <= 7 milliseconds
+99.98% <= 8 milliseconds
+99.99% <= 9 milliseconds
+100.00% <= 9 milliseconds
+45310.38 requests per second
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 10 -t set
+====== SET ======
+  100000 requests completed in 2.35 seconds
+  50 parallel clients
+  10 bytes payload
+  keep alive: 1
+
+88.67% <= 1 milliseconds
+92.15% <= 2 milliseconds
+95.18% <= 3 milliseconds
+97.88% <= 4 milliseconds
+99.46% <= 5 milliseconds
+99.69% <= 6 milliseconds
+99.83% <= 7 milliseconds
+99.89% <= 8 milliseconds
+99.99% <= 9 milliseconds
+100.00% <= 9 milliseconds
+42517.01 requests per second
+
+gec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 20 -t get
+====== GET ======
+  100000 requests completed in 2.25 seconds
+  50 parallel clients
+  20 bytes payload
+  keep alive: 1
+
+89.20% <= 1 milliseconds
+92.61% <= 2 milliseconds
+95.75% <= 3 milliseconds
+98.27% <= 4 milliseconds
+99.34% <= 5 milliseconds
+99.67% <= 6 milliseconds
+99.83% <= 7 milliseconds
+99.98% <= 8 milliseconds
+100.00% <= 8 milliseconds
+44503.79 requests per second
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 20 -t set
+====== SET ======
+  100000 requests completed in 3.46 seconds
+  50 parallel clients
+  20 bytes payload
+  keep alive: 1
+
+79.20% <= 1 milliseconds
+88.23% <= 2 milliseconds
+92.36% <= 3 milliseconds
+95.95% <= 4 milliseconds
+98.26% <= 5 milliseconds
+98.93% <= 6 milliseconds
+99.21% <= 7 milliseconds
+99.58% <= 8 milliseconds
+99.88% <= 9 milliseconds
+99.93% <= 10 milliseconds
+99.95% <= 11 milliseconds
+99.98% <= 12 milliseconds
+99.99% <= 15 milliseconds
+99.99% <= 16 milliseconds
+100.00% <= 17 milliseconds
+100.00% <= 17 milliseconds
+28868.36 requests per second
+
+sgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 50 -t get
+====== GET ======
+  100000 requests completed in 2.24 seconds
+  50 parallel clients
+  50 bytes payload
+  keep alive: 1
+
+88.81% <= 1 milliseconds
+92.38% <= 2 milliseconds
+95.15% <= 3 milliseconds
+97.69% <= 4 milliseconds
+99.50% <= 5 milliseconds
+99.67% <= 6 milliseconds
+99.73% <= 7 milliseconds
+99.86% <= 8 milliseconds
+100.00% <= 9 milliseconds
+100.00% <= 10 milliseconds
+100.00% <= 10 milliseconds
+44563.28 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 50 -t set
+====== SET ======
+  100000 requests completed in 3.13 seconds
+  50 parallel clients
+  50 bytes payload
+  keep alive: 1
+
+82.40% <= 1 milliseconds
+89.74% <= 2 milliseconds
+93.13% <= 3 milliseconds
+96.71% <= 4 milliseconds
+98.45% <= 5 milliseconds
+99.28% <= 6 milliseconds
+99.41% <= 7 milliseconds
+99.68% <= 8 milliseconds
+99.89% <= 9 milliseconds
+99.93% <= 10 milliseconds
+99.93% <= 11 milliseconds
+99.95% <= 12 milliseconds
+99.96% <= 13 milliseconds
+99.97% <= 14 milliseconds
+100.00% <= 14 milliseconds
+31948.88 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 100 -t get
+====== GET ======
+  100000 requests completed in 2.16 seconds
+  50 parallel clients
+  100 bytes payload
+  keep alive: 1
+
+89.19% <= 1 milliseconds
+92.44% <= 2 milliseconds
+95.26% <= 3 milliseconds
+98.20% <= 4 milliseconds
+99.46% <= 5 milliseconds
+99.68% <= 6 milliseconds
+99.87% <= 7 milliseconds
+99.99% <= 8 milliseconds
+100.00% <= 11 milliseconds
+46232.08 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 100 -t set
+====== SET ======
+  100000 requests completed in 3.03 seconds
+  50 parallel clients
+  100 bytes payload
+  keep alive: 1
+
+82.52% <= 1 milliseconds
+89.67% <= 2 milliseconds
+93.36% <= 3 milliseconds
+96.59% <= 4 milliseconds
+98.73% <= 5 milliseconds
+99.28% <= 6 milliseconds
+99.44% <= 7 milliseconds
+99.71% <= 8 milliseconds
+99.77% <= 9 milliseconds
+99.93% <= 10 milliseconds
+99.99% <= 11 milliseconds
+100.00% <= 12 milliseconds
+100.00% <= 12 milliseconds
+32981.53 requests per second
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 200 -t get
+====== GET ======
+  100000 requests completed in 2.17 seconds
+  50 parallel clients
+  200 bytes payload
+  keep alive: 1
+
+88.92% <= 1 milliseconds
+92.53% <= 2 milliseconds
+95.68% <= 3 milliseconds
+98.26% <= 4 milliseconds
+99.53% <= 5 milliseconds
+99.75% <= 6 milliseconds
+99.92% <= 7 milliseconds
+99.98% <= 8 milliseconds
+100.00% <= 8 milliseconds
+46040.52 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 200 -t set
+====== SET ======
+  100000 requests completed in 3.23 seconds
+  50 parallel clients
+  200 bytes payload
+  keep alive: 1
+
+80.17% <= 1 milliseconds
+88.45% <= 2 milliseconds
+92.50% <= 3 milliseconds
+96.36% <= 4 milliseconds
+98.51% <= 5 milliseconds
+99.32% <= 6 milliseconds
+99.62% <= 7 milliseconds
+99.77% <= 8 milliseconds
+99.85% <= 9 milliseconds
+99.93% <= 10 milliseconds
+99.94% <= 11 milliseconds
+99.98% <= 12 milliseconds
+100.00% <= 14 milliseconds
+30940.59 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 500 -t get
+====== GET ======
+  100000 requests completed in 2.40 seconds
+  50 parallel clients
+  500 bytes payload
+  keep alive: 1
+
+88.06% <= 1 milliseconds
+91.82% <= 2 milliseconds
+95.22% <= 3 milliseconds
+98.14% <= 4 milliseconds
+99.34% <= 5 milliseconds
+99.46% <= 6 milliseconds
+99.73% <= 7 milliseconds
+99.99% <= 8 milliseconds
+99.99% <= 9 milliseconds
+99.99% <= 10 milliseconds
+100.00% <= 10 milliseconds
+41614.64 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 500 -t set
+====== SET ======
+  100000 requests completed in 3.51 seconds
+  50 parallel clients
+  500 bytes payload
+  keep alive: 1
+
+79.21% <= 1 milliseconds
+87.87% <= 2 milliseconds
+92.08% <= 3 milliseconds
+96.11% <= 4 milliseconds
+98.61% <= 5 milliseconds
+99.31% <= 6 milliseconds
+99.50% <= 7 milliseconds
+99.68% <= 8 milliseconds
+99.85% <= 9 milliseconds
+99.88% <= 10 milliseconds
+99.94% <= 11 milliseconds
+99.98% <= 12 milliseconds
+99.99% <= 13 milliseconds
+100.00% <= 13 milliseconds
+28498.15 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 1000 -t get
+====== GET ======
+  100000 requests completed in 2.26 seconds
+  50 parallel clients
+  1000 bytes payload
+  keep alive: 1
+
+88.96% <= 1 milliseconds
+92.17% <= 2 milliseconds
+95.21% <= 3 milliseconds
+98.30% <= 4 milliseconds
+99.54% <= 5 milliseconds
+99.70% <= 6 milliseconds
+99.81% <= 7 milliseconds
+99.89% <= 8 milliseconds
+99.96% <= 12 milliseconds
+100.00% <= 12 milliseconds
+44189.13 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 1000 -t set
+====== SET ======
+  100000 requests completed in 2.96 seconds
+  50 parallel clients
+  1000 bytes payload
+  keep alive: 1
+
+84.47% <= 1 milliseconds
+90.27% <= 2 milliseconds
+93.79% <= 3 milliseconds
+97.23% <= 4 milliseconds
+98.93% <= 5 milliseconds
+99.45% <= 6 milliseconds
+99.66% <= 7 milliseconds
+99.85% <= 8 milliseconds
+99.93% <= 9 milliseconds
+99.95% <= 10 milliseconds
+99.99% <= 11 milliseconds
+100.00% <= 13 milliseconds
+100.00% <= 13 milliseconds
+33829.50 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 5000 -t get
+====== GET ======
+  100000 requests completed in 2.10 seconds
+  50 parallel clients
+  5000 bytes payload
+  keep alive: 1
+
+90.03% <= 1 milliseconds
+93.55% <= 2 milliseconds
+96.11% <= 3 milliseconds
+98.76% <= 4 milliseconds
+99.74% <= 5 milliseconds
+99.79% <= 6 milliseconds
+99.93% <= 7 milliseconds
+99.96% <= 8 milliseconds
+99.99% <= 10 milliseconds
+100.00% <= 11 milliseconds
+47551.12 requests per second
+
+
+csgec@ubuntu:/usr/local/redis/bin$ ./redis-benchmark -d 5000 -t set
+====== SET ======
+  100000 requests completed in 3.50 seconds
+  50 parallel clients
+  5000 bytes payload
+  keep alive: 1
+
+78.12% <= 1 milliseconds
+87.52% <= 2 milliseconds
+91.88% <= 3 milliseconds
+96.05% <= 4 milliseconds
+98.43% <= 5 milliseconds
+99.12% <= 6 milliseconds
+99.41% <= 7 milliseconds
+99.51% <= 8 milliseconds
+99.64% <= 9 milliseconds
+99.75% <= 10 milliseconds
+99.86% <= 11 milliseconds
+99.90% <= 13 milliseconds
+99.93% <= 14 milliseconds
+100.00% <= 14 milliseconds
+28571.43 requests per second
+
+
